@@ -603,6 +603,10 @@ strong {
   object-fit: cover;
 }
 
+.artists-image-wrap1 img{
+  height: 48rem;
+}
+
 .artists-thumb {
   position: relative;
   overflow: hidden;
@@ -760,6 +764,81 @@ strong {
   vertical-align: middle;  /* Căn giữa theo chiều dọc */
 }
 
+/*---------------------------------------
+  PARTNER              
+-----------------------------------------*/
+
+.schedule-section .container2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+ /* Each sector block */
+.schedule-section .sector {
+  border: 2px solid #ffda44;
+  border-radius: 30px;
+  padding: 5rem 3rem;
+  box-shadow: 
+    inset 0 0 18px 3px rgb(255 218 68 / 0.4),
+    0 0 15px rgb(255 218 68 / 0.2);
+  flex: 1 1 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Bottom sector (full width) */
+.schedule-section .sector.fullwidth {
+  flex-basis: 100%;
+}
+/* Section title */
+.schedule-section .sector-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  user-select: none;
+  text-shadow: 0 0 5px rgb(255 218 68 / 0.8);
+}
+/* Container for logos */
+.schedule-section .logo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem 1.8rem;
+  justify-content: center;
+}
+/* Each logo container */
+.schedule-section .logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 96px;
+  max-height: 50px;
+}
+/* Logos themselves adapt to container size while preserving aspect ratio */
+.schedule-section .logo-item img {
+  max-width: 100%;
+  max-height: 65px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+
+  .schedule-section .sector {
+    flex-basis: 100%;
+  }
+  .schedule-section .logo-item {
+    max-width: 72px;
+    max-height: 40px;
+  }
+  .schedule-section .sector-title {
+    font-size: 1.3rem;
+  }
+}
 /*---------------------------------------
   PRICING              
 -----------------------------------------*/
@@ -1031,6 +1110,13 @@ strong {
 }
 
 @media screen and (max-width: 767px) {
+  .about-text-wrap {
+    height: 30rem;
+  }
+  .artists-image-wrap1 img{
+    height: 23rem;
+  }
+  
   .custom-btn {
     font-size: 14px;
     padding: 10px 20px;
